@@ -1,5 +1,5 @@
 insert into function_entity (function_text)
-values ('pow(x, 2) * sin(sqrt(x))'),
-       ('abs(cos(x))'),
-       ('tan(2 * x) * sin(x)');
+values ('x ** 2'),
+       ('Math.sin(x)'),
+       ('Math.tan(2 * x) * Math.sin(x)');
 
