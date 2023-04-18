@@ -20,9 +20,19 @@ public class FunctionController {
         return functionService.getFunctions();
     }
 
+    @PostMapping("/functions")
+    void addFunction(@RequestBody FunctionDTO functionDTO) {
+        functionService.save(functionDTO);
+    }
+
     @PatchMapping("/functions/{function-id}")
     void updateFunction(@RequestBody FunctionDTO functionDTO,
                         @PathVariable("function-id") Long id) {
         functionService.updateFunction(id, functionDTO);
+    }
+
+    @DeleteMapping("/functions/{function-id}")
+    void deleteFunction(@PathVariable("function-id") Long id) {
+        functionService.deleteFunction(id);
     }
 }
