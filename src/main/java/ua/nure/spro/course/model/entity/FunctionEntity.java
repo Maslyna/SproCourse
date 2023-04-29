@@ -17,4 +17,8 @@ public class FunctionEntity {
     private Long id;
     @Column(name = "function_text")
     private String functionText;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
 }
